@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- IBM Plex Sans Hebrew -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="styles.css" />
+  <title>Airplane Mode — Portfolio</title>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__title">Airplane_mode Web Portfolio</div>
+      <a class="pill pill--neon" href="https://airplane-mode-delta.vercel.app" target="_blank" rel="noreferrer">
+        Live demo
+      </a>
+    </div>
+  </div>
+
+  <main class="page">
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <h1>
+        Turn on airplane mode,<br />
+        and start traveling<br />
+        through your records.
+      </h1>
+
+      <div class="hero__row">
+        <p class="muted hero__desc">
+          Collect fragmented memories into your own personal space,
+          then revisit and re-experience them through interaction.
+        </p>
+
+        <div class="hero__side">
+          <div class="hero__actions">
+            <a class="btn btn--ghost" href="#overview">Read story ↓</a>
+            <a class="btn btn--neon" href="https://airplane-mode-delta.vercel.app" target="_blank" rel="noreferrer">
+              View live Website >>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <span>UX Research · Design · Front-end Development</span>
+        <span class="meta__dot">•</span>
+        <span>Three.js · Supabase</span>
+      </div>
+    </header>
+
+    <!-- SECTION: OVERVIEW -->
+     <section class="overview section" id="overview">
+        <h2 >Project Overview</h2>
+
+  <div class="overview__question">
+    <p class="muted">This project began with a simple question:</p>
+    <p class="overview__questionStrong">
+      What if records were not just content to be stored, but spaces I could re-enter and experience again?
+    </p>
+  </div>
+
+  <div class="overview__grid">
+    <div class="overview__left">
+      <p class="overview__p">
+        I often scatter my travel memories—<br>
+        photos on one platform, text on another,<br>
+        and emotions and context somewhere else entirely.<br>
+        As a result, records continue to accumulate,<br>
+        but are rarely revisited as lived experiences.
+      </p>
+
+      <p class="overview__p">
+        This project proposes a web environment<br>
+        that gathers fragmented travel records into a<br>
+        personal space, allowing me to revisit and explore my<br>
+        memories through spatial interaction, and enabling<br>
+        those records to be shared naturally when appropriate.
+      </p>
+    </div>
+
+    <div class="overview__right">
+        <div class="polaroidStack" data-stack>
+            <img class="polaroid p1" src="images/p1.png" alt="">
+            <img class="polaroid p2" src="images/p2.png" alt="">
+            <img class="polaroid p3" src="images/p3.png" alt="">
+        </div>
+    </div>
+  </div>
+</section>
+
+    <!-- <section class="section" id="overview">
+      <div class="section__head">
+        <h2>Project Overview</h2>
+      </div>
+
+      <div class="two-col">
+        <div class="prose">
+          <p>
+            A web-based personal space where travel records become an immersive environment,
+            not just a list of files.
+          </p>
+          <p class="muted">
+            Users can collect photos, videos, music, and notes into a room, then revisit memories
+            through spatial interaction.
+          </p>
+        </div>
+
+        <figure class="side-figure">
+          <img src="assets/overview-sketch.png" alt="overview sketch" />
+          <figcaption class="caption muted">Small concept sketch / snapshot</figcaption>
+        </figure>
+      </div>
+    </section> -->
+
+    <!-- SECTION: INSIGHT -->
+    <section class="insight-shift section">
+        <h2>Insight & Shift</h2>
+
+        <div class="insight-block">
+            <span class="tag tag--insight">Insight</span>
+
+            <p>
+            Through personas and user research, I found that users are accustomed to
+            visually driven, scroll-based platforms, but struggle to distinguish
+            marketing-oriented content from authentic personal experiences.
+            </p>
+
+            <p>
+            As a result, personal records continue to accumulate, while the context of
+            real experiences fades, making them less likely to be revisited or
+            meaningfully engaged with.
+            </p>
+        </div>
+
+        <div class="shift-block">
+            <span class="tag tag--shift">Shift</span>
+
+            <p>
+            To address this, I designed a space-based environment where personal
+            records can first be organized and accumulated, rather than immediately
+            shared.
+            </p>
+
+            <p>
+            By doing so, I aimed to create a structure in which authentic experiences
+            and personal context remain visible and meaningful, even when those
+            records are shared later.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SECTION: CONCEPT (POPUPS ON SCROLL) -->
+        <section class="section concept" id="concept">
+        <div class="section__head">
+            <h2>Concept: Records as Space</h2>
+        </div>
+
+        <div class="conceptStage" data-concept>
+            <!-- 배경 이미지 -->
+            <img class="conceptStage__bg" src="images/concept-room.png" alt="Concept room" />
+
+            <!-- 팝업 1 (왼쪽 위) -->
+            <div class="conceptPop conceptPop--l1" data-pop>
+            <div class="conceptPop__head">
+                <span class="conceptPop__icon">💡</span>
+                <span class="conceptPop__title">Concept 1</span>
+                <button class="conceptPop__close" type="button" aria-label="Close">×</button>
+            </div>
+            <p class="conceptPop__body">
+                Rather than organizing records by time or location, this project treats records as a space
+                that users can personally design and arrange.
+            </p>
+            </div>
+
+            <!-- 팝업 2 (오른쪽) -->
+            <div class="conceptPop conceptPop--r1" data-pop>
+            <div class="conceptPop__head">
+                <span class="conceptPop__icon">💡</span>
+                <span class="conceptPop__title">Concept 2</span>
+                <button class="conceptPop__close" type="button" aria-label="Close">×</button>
+            </div>
+            <p class="conceptPop__body">
+                When records are placed within a space, users are not simply organizing information,
+                but re-entering and experiencing scenes they have created themselves.
+            </p>
+            </div>
+
+            <!-- 팝업 3 (왼쪽 아래) -->
+            <div class="conceptPop conceptPop--l2" data-pop>
+            <div class="conceptPop__head">
+                <span class="conceptPop__icon">💡</span>
+                <span class="conceptPop__title">Concept 3</span>
+                <button class="conceptPop__close" type="button" aria-label="Close">×</button>
+            </div>
+            <p class="conceptPop__body">
+                In this project, space is not a tool for precise classification, but a device that gives users
+                a reason to return to their memories.
+            </p>
+            </div>
+        </div>
+        </section>
+
+    <!-- SECTION: KEY FEATURES -->
+        <section class="section keyfeatures" id="features">
+        <div class="section__head">
+            <h2>Key Features</h2>
+        </div>
+
+        <div class="kf">
+            <!-- Row 1 -->
+            <article class="kf__row">
+            <figure class="kf__media">
+                <video
+                    class="feature-media"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  >
+                  <source src="images/home.mp4" type="video/mp4">
+                </video>
+            </figure>
+
+            <div class="kf__text">
+                <div class="kf__title">
+                <span>Feature 1 — </span>
+                <span class="kf__hl">Entry Experience</span>
+                </div>
+                <p class="muted">
+                The homepage is designed as an entry point into a space composed of records.
+                Rather than simply presenting content, it creates the feeling of stepping into another world.
+                This experience sets the overall tone and atmosphere of the website.
+                </p>
+            </div>
+            </article>
+
+            <!-- Row 2 -->
+            <article class="kf__row">
+            <figure class="kf__media">
+                <video
+                    class="feature-media"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  >
+                  <source src="images/rotation.mp4" type="video/mp4">
+                </video>
+            </figure>
+
+            <div class="kf__text">
+                <div class="kf__title">
+                <span>Feature 2 — </span>
+                <span class="kf__hl">My Room</span>
+                </div>
+                <p class="muted">
+                Records become objects within a 3D room, which users continuously shape into their own personal space
+                by adding photos, text, and videos over time. Through this process, documentation shifts from simple storage
+                to an interactive, evolving environment.
+                </p>
+            </div>
+            </article>
+
+            <!-- Row 3 -->
+            <article class="kf__row">
+            <figure class="kf__media">
+                <video
+                    class="feature-media"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  >
+                  <source src="images/search.mp4" type="video/mp4">
+                </video>
+
+
+            </figure>
+
+            <div class="kf__text">
+                <div class="kf__title">
+                <span>Feature 3 — </span>
+                <span class="kf__hl">Revisit & Share</span>
+                </div>
+                <p class="muted">
+                Records stored in a user’s room are publicly searchable and can be explored by other users.
+                Users can also save selected records created by others to their personal collection for later reference.
+                </p>
+            </div>
+            </article>
+        </div>
+        </section>
+
+
+    <!-- SECTION: PROCESS & DECISIONS -->
+        <section class="section process" id="process">
+        <div class="section__head">
+            <h2>Process & Decisions</h2>
+        </div>
+
+        <div class="process__wrap">
+            <div class="process__copy">
+            <p class="muted">
+                One of the main challenges of this project was defining a realistic scope and technical direction
+                while designing and implementing the entire website.
+            </p>
+            <p class="muted">
+                In the early stages of development, it was difficult to accurately estimate the required time,
+                technical complexity, and overall feasibility. To address this, I adopted an iterative approach—
+                starting with small, functional demos and gradually expanding the website’s features.
+            </p>
+            <p class="muted">
+                Through this process, I was able to prioritize core functionality and make technical and design decisions
+                grounded in the actual implementation process.
+            </p>
+            </div>
+
+            <!-- Carousel (big) + thumbnails -->
+            <div class="processCarousel" data-process-carousel>
+            <button class="processCarousel__btn" data-prev aria-label="Previous">‹</button>
+
+            <div class="processCarousel__viewport">
+                <div class="processCarousel__track">
+                <!-- ✅ 너 이미지 경로만 바꿔 -->
+                <div class="processCarousel__slide"><img src="images/process-1.png" alt="Process 1"></div>
+                <div class="processCarousel__slide"><img src="images/process-2.png" alt="Process 2"></div>
+                <div class="processCarousel__slide"><img src="images/process-3.png" alt="Process 3"></div>
+                <div class="processCarousel__slide"><img src="images/process-4.png" alt="Process 4"></div>
+                <div class="processCarousel__slide"><img src="images/process-5.png" alt="Process 5"></div>
+                </div>
+            </div>
+
+            <button class="processCarousel__btn" data-next aria-label="Next">›</button>
+
+            <div class="processCarousel__thumbs" data-thumbs></div>
+            </div>
+        </div>
+        </section>
+
+
+    <!-- SECTION: DESIGN APPROACH -->
+    <section class="section design-approach" id="design">
+    <div class="section__head">
+        <h2>Design Approach</h2>
+    </div>
+
+    <ul class="checklist checklist--plain">
+        <li>UX insights were not treated as assumptions, but were validated and continuously refined through implementation.</li>
+        <li>Small, iterative demos enabled realistic design decisions to be made across the entire project.</li>
+        <li>Research, design, and development were approached as one continuous and coherent process.</li>
+    </ul>
+    </section>
+
+
+    <!-- SECTION: OUTCOME -->
+    <section class="section outcome" id="outcome">
+    <div class="section__head">
+        <h2>Outcome & Reflection</h2>
+    </div>
+
+    <p class="outcome__p muted">
+        This project goes beyond building a single website. It frames the web as a design medium for structuring and revisiting personal experiences.
+        By designing a format for <span class="hl">records themselves</span>, the project explores how individual ways of documenting experiences can be
+        <span class="hl">shaped, shared, and revisited through space</span>.
+    </p>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="https://airplane-mode-delta.vercel.app" target="_blank" rel="noreferrer">
+            Live Demo
+            </a>
+            <span class="sep">·</span>
+            <a href="https://github.com/juliachoish-droid/Airplane_mode" target="_blank" rel="noreferrer">
+            GitHub Repository
+            </a>
+            <span class="sep">·</span>
+            <a href="mailto:julichoish@gmail.com">
+            Contact
+            </a>
+        </div>
+
+        <div class="footer__meta">
+            <p>© 2026 Seunghui Choi</p>
+            <p>
+            Airplane Mode — A web-based spatial archive for personal records</p>
+            <br>
+            <p>
+            Creative Design & Technology, Saxion University
+            </p>
+        </div>
+    </footer>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
