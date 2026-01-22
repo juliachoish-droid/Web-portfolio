@@ -145,7 +145,7 @@ a:hover{ text-decoration:none;}
 
 /* SECTIONS */
 .section{
-  padding: 90px 0;
+  padding: 40px 0;
 }
 .section__head{
   margin-bottom: 20px;
@@ -242,6 +242,43 @@ a:hover{ text-decoration:none;}
 .polaroid.p2{ transition-delay: 210ms; }
 .polaroid.p3{ transition-delay: 280ms; }
 
+@media (max-width: 520px){
+
+  /* 1) 스택 자체도 왼쪽으로 살짝 당기기(옵션) */
+  .polaroidStack{
+    width: 320px;
+    height: 190px;
+  }
+
+  /* 2) 모바일에서는 왼쪽 기준으로 배치 */
+  .polaroid{
+    right: auto;
+    left: 0;          /* ✅ 기준점을 왼쪽으로 */
+    width: 180px;     /* ✅ 모바일에서 크기 줄이기 */
+  }
+
+  /* 3) 모바일 전용 “퍼짐/정렬” 변수값 재정의 (🔥 핵심) */
+  .polaroidStack{
+    --p1-x: -20px;
+    --p2-x: -8px;
+    --p3-x: 6px;
+
+    --p1-in: 0px;
+    --p2-in: 22px;
+    --p3-in: 44px;
+  }
+
+  /* 4) in-view에서 너가 translateY(-10%) 쓰고있는데,
+        모바일은 그냥 -50%가 제일 안정적임 */
+  .polaroidStack.is-inview .polaroid{
+    transform: translateY(-50%); /* 기본값으로 리셋 */
+  }
+  .polaroidStack.is-inview .polaroid.p1{ transform: translateY(-50%) translateX(var(--p1-in)) rotate(0); }
+  .polaroidStack.is-inview .polaroid.p2{ transform: translateY(-50%) translateX(var(--p2-in)) rotate(0); }
+  .polaroidStack.is-inview .polaroid.p3{ transform: translateY(-50%) translateX(var(--p3-in)) rotate(0); }
+}
+
+
 
 /* 모바일 */
 @media (max-width: 900px){
@@ -257,27 +294,16 @@ a:hover{ text-decoration:none;}
   .overview__right{
     justify-content: flex-start;
   }
-  @media (max-width: 900px){
   .polaroidStack{
-    width: min(360px, 100%);
-    height: 200px;
-
-    /* 겹친 상태 */
-    --p1-x: -52px;
-    --p2-x: -22px;
-    --p3-x: 8px;
-
-    /* 정렬 상태 */
-    --p1-in: -60px;
-    --p2-in: 0px;
-    --p3-in: 60px;
+    width: min(320px, 100%);
+    height: 190px;
+    --p1-x: -40px;
+    --p2-x: -20px;
+    --p3-x: 0px;
+    --p1-in: -120px;
+    --p2-in: -60px;
+    --p3-in: 10px;
   }
-
-  .polaroid{
-    width: 180px; /* 살짝만 줄여서 화면 밖 안 나가게 */
-  }
-}
-
 }
 
 .insight-block{
@@ -895,4 +921,57 @@ img{ max-width:100%; display:block; }
   height: auto;
   display: block;
   border: none; /* 아웃라인 제거 */
+}
+
+/* ===== Insight: Problem / Solution split ===== */
+.ps-split{
+  margin-top: 0px;
+  margin-bottom: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 980px;
+}
+
+.ps-card{
+  border: 1px solid var(--line);
+  padding: 16px 16px 14px;
+  background: #fff;
+}
+
+.ps-card__label{
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+
+/* 기존 형광 태그 스타일과 통일 */
+.ps-card__label::before{
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  bottom: 2px;
+  height: 1.1em;
+  background: var(--neon);
+  z-index: -1;
+}
+
+.ps-card__text{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(11,11,11,.75);
+}
+
+/* 모바일: 세로로 쌓기 */
+@media (max-width: 900px){
+  .ps-split{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: none;
+  }
 }
