@@ -17,7 +17,7 @@ body{
   background:var(--bg);
   color:var(--fg);
   font-family:"IBM Plex Sans Hebrew", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  font-weight:300; /* ✅ 기본 두께 200 */
+  font-weight:300; /* 기본 두께 200 */
   line-height:1.55;
 }
 
@@ -77,26 +77,26 @@ a:hover{ text-decoration:none;}
   font-size: clamp(40px, 4.2vw, 72px);
   line-height: 1.02;
   letter-spacing: -0.03em;
-  font-weight:400; /* ✅ 타이틀도 얇게 */
+  font-weight:400;
 }
 .muted{ color: var(--muted); }
 
 .hero__row{
   margin-top: 22px;
   display:flex;
-  align-items:flex-end; /* ✅ 버튼을 아래 줄에 맞추고 싶으면 이거 */
+  align-items:flex-end; 
   gap: 28px;
   width:100%;
 }
 .hero__desc{
-  flex: 1 1 auto;      /* ✅ 왼쪽이 공간 먹어야 버튼이 오른쪽 끝으로 감 */
+  flex: 1 1 auto;
   max-width: 520px;
   margin:0;
   font-size: 16px;
   letter-spacing: -0.01em;
 }
 .hero__side{
-  margin-left: auto;   /* ✅ 오른쪽 끝 */
+  margin-left: auto;
   display:flex;
   flex-direction:column;
   align-items:flex-end;
@@ -157,7 +157,7 @@ a:hover{ text-decoration:none;}
   font-size: clamp(40px, 4.2vw, 72px);
   line-height: 1.02;
   letter-spacing: -0.03em;
-  font-weight:400; /* ✅ 타이틀도 얇게 */
+  font-weight:400;
 }
 
 .overview{
@@ -178,7 +178,7 @@ a:hover{ text-decoration:none;}
   display: grid;
   grid-template-columns: 1.1fr 0.9fr; /* 왼쪽 글이 더 넓게 */
   gap: 48px;
-  align-items: center; /* 🔥 오른쪽 이미지가 가운데로 오게 */
+  align-items: center;
 }
 
 .overview__left{
@@ -227,17 +227,17 @@ a:hover{ text-decoration:none;}
   will-change: transform;
 }
 
-/* ✅ 기본: 겹친 상태 */
+/* 기본: 겹친 상태 */
 .polaroid.p1{ transform: translateY(-100%) translateX(var(--p1-x)) rotate(-12deg); z-index: 2; }
 .polaroid.p2{ transform: translateY(-90%) translateX(var(--p2-x)) rotate(10deg);  z-index: 3; }
 .polaroid.p3{ transform: translateY(-80%) translateX(var(--p3-x))  rotate(2deg); z-index: 4; }
 
-/* ✅ 화면에 들어오면 정렬 */
+/* 정렬 */
 .polaroidStack.is-inview .polaroid.p1{ transform: translateY(-10%) translateX(var(--p1-in)) rotate(0deg); }
 .polaroidStack.is-inview .polaroid.p2{ transform: translateY(-10%) translateX(var(--p2-in))  rotate(0deg); }
 .polaroidStack.is-inview .polaroid.p3{ transform: translateY(-10%) translateX(var(--p3-in))  rotate(0deg); }
 
-/* (선택) 살짝 순차로 풀리는 느낌 */
+/* 순차로 풀리는 느낌 */
 .polaroid.p1{ transition-delay: 140ms; }
 .polaroid.p2{ transition-delay: 210ms; }
 .polaroid.p3{ transition-delay: 280ms; }
@@ -253,11 +253,11 @@ a:hover{ text-decoration:none;}
   /* 2) 모바일에서는 왼쪽 기준으로 배치 */
   .polaroid{
     right: auto;
-    left: 0;          /* ✅ 기준점을 왼쪽으로 */
-    width: 180px;     /* ✅ 모바일에서 크기 줄이기 */
+    left: 0;         
+    width: 180px;     
   }
 
-  /* 3) 모바일 전용 “퍼짐/정렬” 변수값 재정의 (🔥 핵심) */
+  /* 3) 모바일 전용  */
   .polaroidStack{
     --p1-x: -20px;
     --p2-x: -8px;
@@ -310,8 +310,8 @@ a:hover{ text-decoration:none;}
     margin-top: 60px;
   max-width: 720px;     /* 너가 쓰는 본문 폭 */
   margin-bottom: 80px;
-  margin-left: auto;   /* 🔥 블록을 오른쪽으로 */
-  text-align: right;   /* 🔥 안의 텍스트도 오른쪽 정렬 */
+  margin-left: auto;   /* 블록을 오른쪽으로 */
+  text-align: right;   /* 안의 텍스트도 오른쪽 정렬 */
 }
 
 .tag{
@@ -817,9 +817,9 @@ img{ max-width:100%; display:block; }
 }
 
 .checklist--plain li{
-  padding: 0;              /* ✅ 박스 제거 */
-  border: none;            /* ✅ 박스 제거 */
-  background: transparent; /* ✅ 박스 제거 */
+  padding: 0;              
+  border: none;            
+  background: transparent; 
   display: flex;
   gap: 10px;
   align-items: flex-start;
